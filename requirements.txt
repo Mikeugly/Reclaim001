@@ -1,0 +1,10 @@
+streamlit>=1.34.0  
+pandas>=2.2.2  
+numpy>=1.25.2  
+scikit-learn>=1.4.2  
+matplotlib>=3.8.4  
+ta>=0.11.0  
+gym>=0.26.2  
+stable-baselines3>=2.2.1  
+alpaca-py>=0.12.0  
+requests>=2.31.0  
