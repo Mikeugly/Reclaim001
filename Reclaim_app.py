@@ -85,12 +85,26 @@ class TradingEnv(Env):
   
 def fetch_data(symbol, interval, limit=500):  
     tf_map = {
-    "5m": TimeFrame(unit="Minute", amount=5),
-    "10m": TimeFrame(unit="Minute", amount=10),
-    "30m": TimeFrame(unit="Minute", amount=30),
-    "1h": TimeFrame(unit="Hour", amount=1),
-    "1d": TimeFrame(unit="Day", amount=1)
+    "1m": TimeFrame.Minute,
+    "5m": TimeFrame.Minute, 
+    "10m": TimeFrame.Minute, 
+    "30m": TimeFrame.Minute, 
+    "1h": TimeFrame.Hour, 
+    "1d": TimeFrame.Day
 }
+
+multiplier_map = {
+    "1m": 1,
+    "5m": 5,
+    "10m": 10,
+    "30m": 30,
+    "1h": 1,
+    "1d": 1
+}
+
+tf = tf_map[interval]
+multiplier = multiplier_map[interval]
+
     }  
     tf = tf_map[interval]  
     end = pd.Timestamp.utcnow()  
